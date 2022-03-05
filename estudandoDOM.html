@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pag</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>DEVevolution</h1>
+    <input type="text" id="tarefa"> <input type="button" value="adicionar" id="adc" onclick="tarefa()">
+    <p id="lista"></p>
+    <p>
+        <a href="./index1_1.html">Voltar</a>
+        <a href="./index.html" >Next</a>
+    </p>
+    <p id="aleatorio"></p>
+    <script>
+/*         function tarefa(){
+            let tarefa = document.getElementById("tarefa").ariaValueText;
+            document.getElementById(lista).innerHTML += tarefa;
+        } */
+        function cor_aleatoria(){
+            return '#' + parseInt((Math.random()* 0xFFFFFF)).toString(16).padStart(6, '0');
+        }
+        var result = Math.floor(Math.random() * (Math.floor(101) - Math.ceil(1)) + Math.floor(1));
+        document.getElementById('aleatorio').innerHTML = result;
+        document.body.style.backgroundColor =cor_aleatoria()
+    </script>
+</body>
+</html>

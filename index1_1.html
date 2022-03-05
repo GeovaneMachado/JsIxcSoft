@@ -5,24 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pag</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <h1>DEVevolution</h1>
-    <p><a href="./index.html">Voltar</a></p>
+    <p><a href="./index.html">Voltar</a>
+        <a href="estudandoDOM.html" >Next</a>
+    </p>
     <p id="tarefas"></p>
-    <input type="button" value="" id="opc" onclick="opc()">
-    <style>
-        body{
-            margin: 0px;
-            padding: 0px;
-        }
-        h1{
-            margin: auto;
-            padding: 0px;
-            background-color: aqua;
-            text-align: center;
-        }
-    </style>
+
 
     <script>
        /* let Tarefa1 = prompt("Nova tarefa: ");
@@ -79,9 +70,6 @@
         document.getElementById('tarefas').innerHTML ="Numero mais frequente: "+ eleMaisFreq
  */
         let tarefas = [];
-        function opc(){
-            
-        }
         while(true){
             let opcao = prompt("a: adicionar\nr: remover\nOpcao: ");
             if(opcao == 'a'){
