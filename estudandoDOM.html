@@ -13,7 +13,7 @@
     <p id="lista"></p>
     <p>
         <a href="./index1_1.html">Voltar</a>
-        <a href="./index.html" >Next</a>
+        <a href="./eventosDOM.html" >Next</a>
     </p>
     <p id="aleatorio"></p>
     <script>
@@ -24,9 +24,27 @@
         function cor_aleatoria(){
             return '#' + parseInt((Math.random()* 0xFFFFFF)).toString(16).padStart(6, '0');
         }
-        var result = Math.floor(Math.random() * (Math.floor(101) - Math.ceil(1)) + Math.floor(1));
-        document.getElementById('aleatorio').innerHTML = result;
+        //var result = Math.floor(Math.random() * (Math.floor(101) - Math.ceil(1)) + Math.floor(1));
+       // document.getElementById('aleatorio').innerHTML = result;
         document.body.style.backgroundColor =cor_aleatoria()
+        /* ehPar = (num) => {if(num % 2 == 0);} 
+        delta = (a, b, c) => b*b - 4 * a *c;
+        function getRaizesFuncaoQuadratica(a, b, c){
+            delt = delta(a, b, c);
+            if(delt <= 0) return -b/(2*a);
+            else{
+                let raizes = []
+                let x1 =(-b + Math.sqrt(delt))/(2*a);
+                let x2 = (-b - Math.sqrt(delt))/(2*a);
+                raizes.push(x1);
+                raizes.push(x2);
+                return raizes;
+            }
+        }
+        let raiz = getRaizesFuncaoQuadratica(2, 4, 10);
+        console.log(raiz)
+        console.log(getRaizesFuncaoQuadratica(-5, 2, 6))
+        document.getElementById('aleatorio').innerHTML = raiz[0] */
     </script>
 </body>
 </html>

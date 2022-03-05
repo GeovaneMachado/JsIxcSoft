@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pag</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>DEVevolution</h1>
+    <input type="text" id="numero1" value=""> <br>
+    <input type="text" id="numero2" value=""><br>
+    <input type="text" id="numero3" value=""><br>
+    <input type="button" value="SomarMedia" id="media">
+    <p id="Resultado"></p>
+    <select name="cores" id="cor">
+        <option value="azul">azul</option>
+        <option value="vermelho">vermelho</option>
+        <option value="amarelo">amarelo</option>
+    </select>
+    <p>
+        <a href="estudandoDOM.html">Voltar</a>
+        <a href="./index.html" >Next</a>
+    </p>
+    <script>
+        let media = document.getElementById("media");
+        media.addEventListener("click", function(){
+            let valor1 = document.getElementById("numero1").value;
+            let valor2 = document.getElementById("numero2").value;
+            let valor3 = document.getElementById("numero3").value;
+            let soma = (Number(valor1) + Number(valor2) + Number(valor3))/3
+            document.getElementById("Resultado").innerHTML = "Resultado: " + soma;
+        })
+        let cor =  document.getElementById("cor");
+        cor.addEventListener("change", function(){
+            if(cor.value == "vermelho")
+                document.body.style.backgroundColor = "red";
+            else if(cor.value == "azul")
+                document.body.style.backgroundColor = "blue";
+            else if(cor.value == "amarelo") document.body.style.background = "yellow"
+        })
+    </script>
+</body>
+</html>
