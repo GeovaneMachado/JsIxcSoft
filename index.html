@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><a href="./index1_1.html">Proximo</a></p>
+    <script>
+        /*let anoNAscimento = prompt("Digite o ano do seu nascimento");
+        alert("Sua idade é: " + Number(2022 - anoNAscimento));
+        let Nota1 = prompt("Primeira nota:");
+        let Nota2 = prompt("Segunda nota:");
+        let Nota3 = prompt("Terceira nota:");
+        let media = (Number(Nota1)+ Number(Nota2)+Number(Nota3))/3
+        alert("Media: " + media)*/
+        var n = Number(prompt("Digite um numero de 1 a 3"));
+        var result = Math.floor(Math.random() * (Math.floor(4) - Math.ceil(1)) + Math.floor(1));
+        if(n === result) alert("Acertou!!\nNumero escolhido: " + n + "\nresultado: "+result);
+        else alert("ERROU!!\nNumero escolhido: " + n + "\nresultado: "+result); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pag</title>
+</head>
+<body>
+    <h1>DEVevolution</h1>
+    <p><a href="./index.html">Voltar</a></p>
+    <p id="tarefas"></p>
+    <input type="button" value="" id="opc" onclick="opc()">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        h1{
+            margin: auto;
+            padding: 0px;
+            background-color: aqua;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+       /* let Tarefa1 = prompt("Nova tarefa: ");
+        let Tarefa2 = prompt("tarefa 1: "+Tarefa1 + "\nNova tarefa: ");
+        let Tarefa3 = prompt("tarefa 1: "+Tarefa1 + "Tarefa 2:"+ Tarefa2+"\nNova tarefa: ");
+        alert(Tarefa1+"\n"+Tarefa2+"\n"+Tarefa3);    
+        tarefa = document.getElementById('tarefas').innerHTML;
+        let adicionaTarefa =  prompt("Nova tarefa: ");
+        tarefa =tarefa + adicionaTarefa;*/
+        //splice remove
+        //push adiciona
+        /*
+        *******ex A ler 3 nomes e colocar em ordem alfabetica*******************
+        var tarefa = [];
+        for(let i= 0; i< 3; i++){           
+            tarefa[i] = prompt("\nNova tarefa: ");         
+        }
+        tarefa.sort();
+        alert(0+"."+tarefa[0]+"\n"+1+"."+tarefa[1]+"\n"+2+"."+tarefa[2]+"\n")
+        **********************************
+        */
+       /*
+       **********MEdiana de notas****************
+        var notas = [];
+        for(let i= 0; i< 5; i++){           
+            notas[i] = Number(prompt("\nNota " + (i+1) +": "));        
+        }
+        notas.sort();
+        
+        document.getElementById('tarefas').innerHTML ="mediana: " + notas[2];
+        */
+        //**********************NUmero mais frequente**********
+ /*        var numeros = [];
+        var cont = 0;  
+        for(let i= 0; i< 5; i++){           
+            numeros[i] = Number(prompt("\nNumero " + (i+1) +": "));       
+        }
+        var eleMaisFreq = numeros[0];
+        var info = 1;
+        for(let i=0; i<5;i++){
+            let num = numeros[i];
+            var maior = 0;
+            for(let j=0; j<5; j++){
+
+                if(numeros[j] === num){
+                    maior += 1;
+                }
+            }
+            if(maior > info) {
+                eleMaisFreq = num;
+                info = maior;
+            }
+        }
+        document.getElementById('tarefas').innerHTML ="Numero mais frequente: "+ eleMaisFreq
+ */
+        let tarefas = [];
+        function opc(){
+            
+        }
+        while(true){
+            let opcao = prompt("a: adicionar\nr: remover\nOpcao: ");
+            if(opcao == 'a'){
+                let novaTarefa = prompt("Nova tarefa: ");
+                tarefas.push(novaTarefa);
+            }
+            else if(opcao == 'r'){
+                let remove = Number(prompt("Indice para remover: "));
+                tarefas.splice(remove, 1);
+            }
+            else break;
+        }
+        p = document.getElementById('tarefas');
+        for(let i = 0;i<tarefas.length; i++)
+            p.innerHTML += i + "." + tarefas[i] + "<br>";
+    </script>
+</body>
+</html>
