@@ -23,14 +23,17 @@
         <a href="estudandoDOM.html">Voltar</a>
         <a href="./index.html" >Next</a>
     </p>
+    <input type="text" id="desc_tarefa">
+    <button id="add_tarefa">Adicionar tarefa</button>
+    <div id="lista_tarefas"></div>
     <script>
         let media = document.getElementById("media");
         media.addEventListener("click", function(){
             let valor1 = document.getElementById("numero1").value;
             let valor2 = document.getElementById("numero2").value;
             let valor3 = document.getElementById("numero3").value;
-            let soma = (Number(valor1) + Number(valor2) + Number(valor3))/3
-            document.getElementById("Resultado").innerHTML = "Resultado: " + soma;
+            let soma = (Number(valor1) + Number(valor2) + Number(valor3))/3;
+            document.getElementById("Resultado").innerHTML = "Resultado: " + soma.toFixed(2);
         })
         let cor =  document.getElementById("cor");
         cor.addEventListener("change", function(){
@@ -40,6 +43,28 @@
                 document.body.style.backgroundColor = "blue";
             else if(cor.value == "amarelo") document.body.style.background = "yellow"
         })
-    </script>
+        let tarefas = []
+        let inputTarefa = document.getElementById('desc_tarefa');
+        let btnTarefa = document.getElementById('add_tarefa');
+        let divTarefa = document.getElementById("lista_tarefas");
+        function renderizarLista(){
+            let tarefasString = '';
+            for(let i =0; i< tarefas.length;i++){
+                tarefasString += (i+1) + '.' + tarefas[i]+ '<br>'
+            }
+            divTarefa.innerHTML = tarefasString;
+
+        }
+        function adicionarTarefa(){
+            let descTarefa = inputTarefa.value;
+            tarefas.push(descTarefa);
+            renderizarLista();
+            inputTarefa.value = '';
+        }
+        btnTarefa.addEventListener('click', adicionarTarefa)
+        btn.addEventListener('Keypress', function(event){
+            if(event.key =='Enter') adicionarTarefa();
+        });
+</script>
 </body>
 </html>
