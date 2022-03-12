@@ -15,9 +15,9 @@
     <input type="button" value="SomarMedia" id="media">
     <p id="Resultado"></p>
     <select name="cores" id="cor">
-        <option value="azul">azul</option>
-        <option value="vermelho">vermelho</option>
-        <option value="amarelo">amarelo</option>
+        <option value="blue">azul</option>
+        <option value="red">vermelho</option>
+        <option value="yellow">amarelo</option>
     </select>
     <p>
         <a href="estudandoDOM.html">Voltar</a>
@@ -37,11 +37,7 @@
         })
         let cor =  document.getElementById("cor");
         cor.addEventListener("change", function(){
-            if(cor.value == "vermelho")
-                document.body.style.backgroundColor = "red";
-            else if(cor.value == "azul")
-                document.body.style.backgroundColor = "blue";
-            else if(cor.value == "amarelo") document.body.style.background = "yellow"
+            document.body.style.backgroundColor = cor.value;
         })
         let tarefas = []
         let inputTarefa = document.getElementById('desc_tarefa');
