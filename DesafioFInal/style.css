@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgb(15, 214, 81);
+}
+#bemVindo{
+    display: block;
+    max-width: 300px;
+    height: 300px;
+    
+}
+#bemVindo > h1{
+    text-align: center;
+}
+#init{
+    color: white;
+    background-color: rgba(0, 255, 42, 0.597);
+    border: 2px black inset;
+    padding: 15px 10px;
+    border-radius: 5px;
+}
