@@ -26,12 +26,12 @@ function init(){
             document.getElementById('tempo').innerText = elapsedTime.toFixed(2);
         }, 10);
         let btn = document.getElementById('parar');
-        btn.addEventListener('click', ()=>{clearInterval(temp)})
+        btn.addEventListener('click', ()=>{clearInterval(temp)});
     }
 
 
     let iniciar = document.getElementById('iniciar');
-    iniciar.addEventListener('click', tempo)
+    iniciar.addEventListener('click', tempo);
     
 }
 
