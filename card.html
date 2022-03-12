@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+</head>
+<body>
+    <script>
+        let corpo = document.body;
+        let btn = document.createElement('input');
+        let divMain = document.createElement('div');
+        let titulo = document.createElement('h1');
+        let imagem = document.createElement('img');
+        let paragrafo = document.createElement('p');
+        corpo.appendChild(divMain);
+        divMain.appendChild(titulo);
+        divMain.appendChild(imagem);
+        divMain.appendChild(paragrafo);
+        divMain.appendChild(btn);
+        btn.type = 'button';
+        btn.value = 'mostrar';
+        btn.addEventListener('click', function(){
+
+            imagem.src = "https://t2.tudocdn.net/514320?w=646&h=284";
+            imagem.style.width = '280px'
+            imagem.style.margin = '10px'
+        })
+        paragrafo.innerText = 'Description goes here! Write anything you want =)';
+        divMain.style.textAlign = 'center'
+        divMain.style.backgroundColor = 'yellow';
+        divMain.style.width = '300px';
+        divMain.style.display = 'inline-block';
+        titulo.innerText = 'Card 1';
+    </script>
+</body>
+</html>

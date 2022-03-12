@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>DEVevolution</h1>
+    <input type="text" id="desc_tarefa">
+    <button id="add_tarefa">Adicionar tarefa</button>
+    <div id="lista_tarefas"></div>
+    <p id="lista"></p>
+    <p>
+        <a href="./eventosDOM.html">Voltar</a>
+        <a href="./index1_1.html" >Next</a>
+    </p>
+
+    <script>
+        let tarefas = [];
+        let inputTarefa = document.getElementById('desc_tarefa');
+        let btnTarefa = document.getElementById('add_tarefa');
+        let divTarefa = document.getElementById("lista_tarefas");
+        function renderizarLista(){
+            for(let i =0; i< tarefas.length;i++){
+                tarefasString.innerText = (tarefas[i].descricao;
+            }
+
+        }
+        function createItem(tarefas){
+        let itemLIsta = document.createElement('div');
+        divTarefa.appendChild(itemLIsta);
+        itemLIsta.innerText = tarefas.descricao;
+        if(tarefas.status){
+            itemLIsta.style.color = 'green'
+        }
+        else{
+            itemLIsta.style.color = 'red'
+        }
+
+        };
+        function adicionarTarefa(){
+            let descTarefa = {
+                descricao: inputTarefa.value,
+                status: false
+            }
+            tarefas.push(descTarefa);
+            renderizarLista();
+            inputTarefa.value = '';
+        }
+        btnTarefa.addEventListener('click', adicionarTarefa)
+        inputTarefa.addEventListener('keypress', function(event){
+            if(event.key ==='Enter') adicionarTarefa();
+        });
+    </script>
+</body>
+</html>
