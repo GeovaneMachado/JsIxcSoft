@@ -7,13 +7,28 @@
     <title>Jogo</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./index.js"></script>
+    <script src="./perguntas.js"></script>
 </head>
 <body>
     <div id="divIniciar">
         <h1 id="bemVindo">Seja bem vindo!!!</h1>
-        <p class="mostra">Digite seu nome:</p><br>
-        <input type="text" id="nameUser" class="mostra">
-        <input type="button" value="INICIAR" id="init">
+        <input type="text" id="nameUser" class="mostraCampoUsuario" placeholder="Digite seu nome">
+        <input type="button" value="INICIAR" class="btn" id="btnIniciar">
+        <input type="button" value="CADASTRAR" class="btn mostraCampoUsuario" id="cadastro">
+    </div>
+    <div id="Perguntas">
+        <div id="nperguntas">
+            <input type="button" value="1" class="numeroPergunta">
+            <input type="button" value="2" class="numeroPergunta">
+            <input type="button" value="3" class="numeroPergunta">
+            <input type="button" value="4" class="numeroPergunta">
+            <input type="button" value="5" class="numeroPergunta">
+            <input type="button" value="R" class="numeroPergunta">
+        </div>
+        <div id="pergunta">
+            <ul id="opcoes">
+            </ul>
+        </div>
     </div>
 
 </body>

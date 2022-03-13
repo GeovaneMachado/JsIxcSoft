@@ -12,12 +12,11 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: blueviolet;
 }
 #bemVindo{
     text-align: center;
 }
-#init{
+.btn{
     color: white;
     background-color: rgba(41, 5, 61, 0.952);
     border: 2px black inset;
@@ -26,13 +25,16 @@ body{
     margin: 8px 50px 20px 114px;
     box-shadow: 10px rgb(27, 25, 25);
 }
-#init:hover{
+.btn:hover{
     background-color: rgba(41, 5, 61, 0.74);
     color: white;
     border: 1px;
 }
 #divIniciar > p {
     margin: -2px 0px -19px 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-style: italic;
 }
 #nameUser{
     margin: auto;
@@ -41,11 +43,35 @@ body{
     border: 2px rgba(59, 56, 56, 0.849);
     border-style: inset;
 }
-.mostra{
+.mostraCampoUsuario{
     display: none;
 }
-/* @keyframes{
-    0%{
 
-    }
-} */
+#Perguntas{
+    background-color: aqua;
+    position: absolute;
+    display: block;
+    width: 700px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+#opcoes>li{
+    margin: 10px;
+    padding: 15px;
+    border-style: inset;
+    border: 4px black;
+}
+.numeroPergunta{
+    background-color: blue;
+    margin: 0px; 
+    padding: 20px 30px 20px 30px;
+    border-radius: 10px;
+}
+#pergunta{
+    background-color: aquamarine;
+    margin: 20px;
+}

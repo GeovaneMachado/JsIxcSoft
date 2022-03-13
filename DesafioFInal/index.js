@@ -1,20 +1,54 @@
 function init(){
     let body = document.body;
-    let divMain = document.getElementById('divIniciar');
+    let divIniciar = document.getElementById('divIniciar');
     let bemVindo = document.getElementById('bemVindo');
-    let iniciar = document.getElementById('init');
+    let btnIniciar = document.getElementById('btnIniciar');
+    let btnCadastrar = document.getElementById('cadastro');
+    btnCadastrar.style.margin = "8px 50px 20px 100px";
+ 
     function createFieldUser(){
-        let inputUser = document.getElementsByClassName('nameUser');
-
-        inputUser.style.display[0] = "block";
-        
+        let inputUser = document.getElementsByClassName('mostraCampoUsuario');
+        divIniciar.removeChild(btnIniciar);
+        for(let i=0; i<inputUser.length;i++)
+        {
+            inputUser[i].style.display = "block";
+        }
         
     } 
-    iniciar.addEventListener('click', ()=>{
-        divMain.removeChild(bemVindo);
+
+
+    btnIniciar.addEventListener('click', ()=>{
+        divIniciar.removeChild(bemVindo);
         createFieldUser();
     })
 
+    function createUser(){
+
+        let nameUser = document.getElementById('nameUser');
+        if(nameUser.value == ''){
+            alert('Digite o nome do usuario');
+            createFieldUser();
+        }
+        let user = {
+            nome: nameUser.value,
+            pontos: 500,
+            ranking: 1
+        }
+        return user;
+    }
+
+    function initPerguntas(){
+        body.removeChild(divIniciar);
+        let divPerguntas = document.getElementById('Perguntas');
+        divPerguntas.style.display = 'block';
+    }
+
+    btnCadastrar.addEventListener('click', function(){
+        user = createUser()
+        localStorage.setItem('usuario', JSON.stringify(user));
+        initPerguntas(); 
+        
+    });
 }
 
 window.addEventListener("load", init);
