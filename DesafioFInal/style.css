@@ -3,21 +3,49 @@
     padding: 0px;
 }
 body{
-    background-color: rgb(15, 214, 81);
+    background-color: rgb(110, 93, 151);
+}
+#divIniciar{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: blueviolet;
 }
 #bemVindo{
-    display: block;
-    max-width: 300px;
-    height: 300px;
-    
-}
-#bemVindo > h1{
     text-align: center;
 }
 #init{
     color: white;
-    background-color: rgba(0, 255, 42, 0.597);
+    background-color: rgba(41, 5, 61, 0.952);
     border: 2px black inset;
-    padding: 15px 10px;
+    padding: 10px 10px;
     border-radius: 5px;
+    margin: 8px 50px 20px 114px;
+    box-shadow: 10px rgb(27, 25, 25);
 }
+#init:hover{
+    background-color: rgba(41, 5, 61, 0.74);
+    color: white;
+    border: 1px;
+}
+#divIniciar > p {
+    margin: -2px 0px -19px 50px;
+}
+#nameUser{
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px rgba(59, 56, 56, 0.849);
+    border-style: inset;
+}
+.mostra{
+    display: none;
+}
+/* @keyframes{
+    0%{
+
+    }
+} */
