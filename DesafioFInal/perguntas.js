@@ -1,81 +1,27 @@
 function init(){
-    let Perguntas = [{
-            id: 1,
-            pergunta: "fasfblabsjflsfjaçsf",
-            Opcoes: [
-                {resposta:  "kfamgkldfm", result:false },
-                {resposta:  "kfamgkldfdsaffm", result:false },
-                {resposta:  "kfamgfsadfkldfm", result:true },
-                {resposta:  "kfamgkasdfasdfcsldfm", result:false },
-                {resposta:  "gcdsaekldfm", result:false },
-            ],
-            respondeu: false,
-        },
-        {
-            id: 2,
-            pergunta: "fasfblabsjflsfjaçsf",
-            Opcoes: [
-                {resposta:  "kfamgkldfm", result:false },
-                {resposta:  "kfamgkldfdsaffm", result:false },
-                {resposta:  "kfamgfsadfkldfm", result:true },
-                {resposta:  "kfamgkasdfasdfcsldfm", result:false },
-                {resposta:  "gcdsaekldfm", result:false },
-            ],
-            respondeu: false,
-        },
-        {
-            id: 3,
-            pergunta: "fasfblabsjflsfjaçsf",
-            Opcoes: [
-                {resposta:  "kfamgkldfm", result:false },
-                {resposta:  "kfamgkldfdsaffm", result:false },
-                {resposta:  "kfamgfsadfkldfm", result:true },
-                {resposta:  "kfamgkasdfasdfcsldfm", result:false },
-                {resposta:  "gcdsaekldfm", result:false },
-            ],
-            respondeu: false,
-        },
-        {
-            id: 4,
-            pergunta: "fasfblabsjflsfjaçsf",
-            Opcoes: [
-                {resposta:  "kfamgkldfm", result:false },
-                {resposta:  "kfamgkldfdsaffm", result:false },
-                {resposta:  "kfamgfsadfkldfm", result:true },
-                {resposta:  "kfamgkasdfasdfcsldfm", result:false },
-                {resposta:  "gcdsaekldfm", result:false },
-            ],
-            respondeu: false,
-        },
-        {
-            id: 5,
-            pergunta: "fasfblabsjflsfjaçsf",
-            Opcoes: [
-                {resposta:  "kfamgkldfm", result:false },
-                {resposta:  "kfamgkldfdsaffm", result:false },
-                {resposta:  "kfamgfsadfkldfm", result:true },
-                {resposta:  "kfamgkasdfasdfcsldfm", result:false },
-                {resposta:  "gcdsaekldfm", result:false },
-            ],
-            respondeu: false,
-        }
-    ]
 
-    escrevePergunta();
-    function escrevePergunta(){
-        let tituloPergunta = document.getElementById("tituloPergunta");
-        let perguntaAtual = 0;
-        tituloPergunta.innerText = Perguntas[perguntaAtual].pergunta;
-        let item = document.createElement('li');
-        let lista = document.getElementById("Opcoes");
-        for(let i= 0;i < Perguntas[perguntaAtual].Opcoes.length; i++){
-            item.innerText = Perguntas[perguntaAtual].Opcoes[i].resposta
-            lista.appendChild(item);
-        }
+    let respostas = {
+        
     }
-
+    function escrevePergunta(){
+        let Perguntas = document.getElementsByClassName("perguntas");
+        let resposta = document.getElementsByClassName("respostaPergunta1");
+        for(let i=0; i<Perguntas.length; i++){
+            Perguntas[i].style.display ='block';
+            for(let j=0; j<resposta.length; j++){
+                resposta[2].addEventListener("click", ()=>{
+                    let numeroPergunta = document.getElementsByClassName("numeroPergunta");
+                    numeroPergunta[0].style.backgroundColor = "green";
+                    Perguntas[i].style.display ='none';
+                })
+            }
+        }
+            
+    }
+    escrevePergunta()
+ 
     function resposta(){
-    return;
+        return;
     }
 }
 window.addEventListener("load", init)
