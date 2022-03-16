@@ -5,6 +5,28 @@
 body{
     background-color: rgb(110, 93, 151);
 }
+table{
+    background-color: rgb(10, 143, 6);
+    margin: 0px 30px; 
+    padding: 20px 30px 20px 30px;
+    border-radius: 10px;
+    border-collapse: collapse;
+    transition: 0.5s;
+}
+td:hover{
+    background-color: aqua;
+    transition: 0.25s;
+}
+th, td{
+    border-spacing: 1px;
+    border-color: black;
+    border: 1px;
+    border-style: solid;
+    width: 700px;
+    height: 55px;
+    text-align: center;    
+}
+
 #divIniciar{
     position: absolute;
     width: 300px;
@@ -80,4 +102,5 @@ body{
 }
 .perguntas{
     display: none;
+
 }
