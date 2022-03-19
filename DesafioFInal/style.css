@@ -72,7 +72,7 @@ th, td{
 #Perguntas{
     background-color: aqua;
     position: absolute;
-    display: block;
+    display: none;
     width: 700px;
     height: 500px;
     top: 50%;
