@@ -75,7 +75,7 @@ function Quiz(){
             pontuacao += respostas[perguntaAtual].pontos;
         }
         else{
-            numeroPerguntas[perguntaAtual].style.backgroundColor = "red";
+            numeroPerguntas[perguntaAtual].style.backgroundColor = "#f34139db";
         }
     }
     renderizarPerguntas();

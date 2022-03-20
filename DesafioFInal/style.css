@@ -4,9 +4,17 @@
 }
 body{
     background-color: rgb(110, 93, 151);
+    background-image: url("https://image.api.playstation.com/vulcan/img/rnd/202010/2217/KAmUQWQ5V9QF3XDzmty1VkKj.png");
+    background-size: cover;
+    /* background: no-repeat; */
+    max-width:100%;
+    max-height:150px;
+/*     width: auto;
+    height: auto; */
+
 }
 table{
-    background-color: rgb(10, 143, 6);
+    background-color: #5eaed3ab;
     margin: 0px 30px; 
     padding: 20px 30px 20px 30px;
     border-radius: 10px;
@@ -14,7 +22,7 @@ table{
     transition: 0.5s;
 }
 td:hover{
-    background-color: aqua;
+    background-color: #869a9e;
     transition: 0.25s;
 }
 th, td{
@@ -70,7 +78,7 @@ th, td{
 }
 
 #Perguntas{
-    background-color: aqua;
+    background-color: #1f33379c;
     position: absolute;
     display: none;
     width: 700px;
@@ -93,11 +101,11 @@ th, td{
    border-collapse: collapse;
 }
 #ranking>tr:hover{
-    background-color: aqua;
+    background-color: #869a9e;
     
 }
 .numeroPergunta{
-    background-color: blue;
+    background-color: #869a9e;
     margin: 0px; 
     padding: 20px 30px 20px 30px;
     border-radius: 10px;
