@@ -5,7 +5,7 @@ function usuario(){
     let btnIniciar = document.getElementById('btnIniciar');
     let btnCadastrar = document.getElementById('cadastro');
     btnCadastrar.style.margin = "8px 50px 20px 100px";
- 
+    
     function createFieldUser(){
         let inputUser = document.getElementsByClassName('mostraCampoUsuario');
         divIniciar.removeChild(btnIniciar);
@@ -15,15 +15,8 @@ function usuario(){
         }
         
     } 
-
-    let user = localStorage.getItem("usuario")
-    if(user == null){
-        user = [];
-    }
-    else{
-        user = JSON.parse(user);
-    }
     
+
     
 
     btnIniciar.addEventListener('click', ()=>{
@@ -39,33 +32,42 @@ function usuario(){
         }
         let newUser = {
             nome: nameUser.value,
-            pontos: 500,
-            ranking: 1
+            pontos: 0,
+        }
+        
+        for(let i= 0; i<user.length; i++){
+            if(user[i].nome == newUser.nome){
+                alert("Usuario já existe")
+                nameUser.value = '';
+                createFieldUser();
+            }
         }
         return newUser;
     }
 
     function initPerguntas(){
+       
         body.removeChild(divIniciar);
         let divPerguntas = document.getElementById('Perguntas');
         divPerguntas.style.display = 'block';
     }
 
+    let user = localStorage.getItem("usuario");
+    if(user == null){
+        user = [];
+    }
+    else{
+        user = JSON.parse(user);
+    }
+    console.log(user)
     btnCadastrar.addEventListener('click', function(){
+        debugger;
         let newUser = createUser();
         user.push(newUser);
         localStorage.setItem('usuario', JSON.stringify(user));
         initPerguntas();     
-    });
-    function showUser(){
-        let table = document.getElementById("ranking");
-        for(let i = 0; i<user.length; i++){
-            let tr = document.createElement("tr");
-            let td = document.createElement("td");
-            table.appendChild(tr);
-            tr.appendChild(td)
-            td.innerText = user[i].nome;   
-        }
-    }
-    showUser();
+       
+    }); 
+
+
 }
