@@ -31,9 +31,10 @@ function Quiz(){
             pontos: 100,
         }
     ]
+
+
     let perguntaAtual = 0;
     let numeroPerguntas = document.getElementsByClassName("numeroPergunta");
-    let resp = document.getElementsByClassName("resp");
 
     function proximaPergunta(){
         respostas[perguntaAtual].pergunta.style.display = "none";
@@ -52,9 +53,13 @@ function Quiz(){
     }
     let pontuacao = 0;
     function renderizarPerguntas(){
-        respostas[perguntaAtual].pergunta.style.display = "block";   
+        respostas[perguntaAtual].pergunta.style.display = "block";
+        diminuindoPontos = setInterval(()=>{
+            respostas[perguntaAtual].pontos -= 1;
+        }, 1000);   
         for(let i=0; i<respostas[perguntaAtual].fieldRespostas.length; i++){
             respostas[perguntaAtual].fieldRespostas[i].addEventListener("click", ()=>{
+                clearInterval(diminuindoPontos)
                 console.log(respostas[perguntaAtual].fieldRespostas[i]);
                 verificaResposta(respostas[perguntaAtual].fieldRespostas[i]);
                 proximaPergunta();
