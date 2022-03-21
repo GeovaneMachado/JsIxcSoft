@@ -1,7 +1,6 @@
 function init(){
     usuario();
-    Quiz();
-   
+    Quiz(); 
 }
 
 window.addEventListener("load", init);
